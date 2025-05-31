@@ -1,0 +1,92 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="row">
+  <div class="col-8 offset-2 mt-3 mb-3">
+    <h2>Edit this listing :</h2>
+    <form
+      method="post"
+      action="/listings/<%=listingsData._id%>?_method=put"
+      class="needs-validation"
+      novalidate
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="updateListing[title]"
+          value="<%= listingsData.title %>"
+          required
+        />
+        <div class="invalid-feedback">Title field cant't be empty</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea
+          name="updateListing[description]"
+          class="form-control"
+          required
+        >
+ <%= listingsData.description %>
+        </textarea>
+        <div class="invalid-feedback">Enter a short description</div>
+      </div>
+
+      <div class="mb-3">
+        <p>Original Image : </p>
+        <img src="<%=ogLink%>" alt="listing_img" />
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload new image : </label>
+        <input type="file" name="updateListing[image]" class="form-control" />
+        <div class="invalid-feedback">Enter a valid image URL</div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price : </label>
+          <input
+            type="number"
+            name="updateListing[price]"
+            value="<%= listingsData.price %>"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Price field cant't be empty!</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="location" class="form-label">Location : </label>
+          <input
+            type="text"
+            name="updateListing[location]"
+            value="<%= listingsData.location %>"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Location cant't be empty</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="country" class="form-label">Country : </label>
+        <input
+          type="text"
+          name="updateListing[country]"
+          value="<%= listingsData.country %>"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Country name cant't be empty</div>
+      </div>
+
+      <button class="btn btn-dark add-btn mb-3" type="submit">
+        Submit listing
+      </button>
+    </form>
+  </div>
+</div>
+<script src="/js/script.js"></script>

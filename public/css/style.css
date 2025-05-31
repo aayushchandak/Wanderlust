@@ -1,0 +1,190 @@
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 200 to 800
+
+.plus-jakarta-sans-<uniquifier> {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+
+.plus-jakarta-sans-medium {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+  flex: 1;
+}
+
+/* NavBar */
+.navbar {
+  height: 5rem;
+}
+
+/* Footer */
+.footer {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+}
+
+.nav-icons i {
+  font-size: 1.2rem !important;
+  margin-right: 0.5rem;
+  color: gray;
+  transition: all 0.3s ease;
+}
+
+.nav-icons i:hover {
+  font-size: 1.5rem !important;
+  color: #222;
+}
+
+.nav-policy a {
+  margin-right: 0.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-policy a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Container */
+.containers {
+  width: 98%;
+  margin: auto;
+}
+
+/* Card */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.overlay-container {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.overlay-container:hover .overlay {
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+
+.overlay-container:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.overlay-text {
+  color: #322c2ca5;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.card {
+  margin-left: 20px !important;
+  margin-bottom: 2rem;
+  border: none !important;
+}
+
+.review-card {
+  border: 2px solid rgb(95, 82, 82);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  background-color: rgb(63, 133, 190);
+}
+
+.card-body {
+  padding: 0px !important;
+}
+
+.card-text {
+  margin: 0px;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+/* New Listing */
+.add-btn{
+  border: none !important;
+  background-color: #fe424d !important;
+}
+
+/* Show Page */
+
+.show-card{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.show-img{
+  height: 40vh;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.review-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

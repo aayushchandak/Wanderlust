@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="row">
+  <div class="col-8 offset-2 mt-2 mb-3">
+    <div class="text-center">
+      <h2>SignUp to wander</h2>
+    </div>
+    <form
+      method="post"
+      action="/users/signup"
+      class="needs-validation"
+      novalidate
+    >
+      <div class="mb-3">
+        <label for="username" class="form-label">Username : </label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          id="username"
+          required
+        />
+        <div class="invalid-feedback">Username cant't be empty</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email : </label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="email"
+          required
+        />
+        <div class="invalid-feedback">Email field cant't be empty</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password : </label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password"
+          required
+        />
+        <div class="invalid-feedback">Password cant't be empty</div>
+      </div>
+      <button class="btn btn-success">Sign Up</button>
+    </form>
+  </div>
+</div>

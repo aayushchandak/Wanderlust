@@ -1,0 +1,35 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <!-- <div class="heading"><h1>All Listings</h1></div> -->
+
+  <div class="card-container">
+    <% for(let list of listingsData){ %>
+    <div class="cover">
+      <a class="card-link" href="/listings/<%= list.id %>">
+        <div class="card" style="width: 20rem">
+          <div class="overlay-container">
+            <img
+              src="<%= list.image.url %>"
+              class="card-img-top"
+              alt="listing_image"
+            />
+            <div class="overlay">
+              <span class="overlay-text">Click to view more</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text plus-jakarta-sans-medium">
+              <b><%= list.title %></b>
+            </p>
+            <p class="card-text plus-jakarta-sans-medium">
+              &#8377; &nbsp;<%= list.price.toLocaleString("en-IN") %>/night
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- <li><a href="/listings/<%= list.id %>"><%= list.title %></a></li> -->
+    <% } %>
+  </div>
+  <!-- </ul> -->
+</body>

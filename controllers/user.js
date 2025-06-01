@@ -30,7 +30,7 @@ const loginForm = (req, res) => {
 };
 
 const loginUser = async (req, res) => {
-  req.flash("success", "Welcome to Wanderlust!");
+  req.flash("success", "Welcome to Zentrek!");
   let redirectUrl = res.locals.redirectUrl || "/listings";
   res.redirect(redirectUrl);
 };

@@ -195,3 +195,53 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .card {
+    margin-left: 0 !important;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .show-img {
+    height: 30vh;
+  }
+
+  .review-row {
+    flex-direction: column;
+  }
+
+  .review-card {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .starability-result {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  h3,
+  h4,
+  h5 {
+    text-align: center;
+  }
+
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
